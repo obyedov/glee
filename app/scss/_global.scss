@@ -1,4 +1,40 @@
-
 body {
+  background-color: #ffffff;
+  color: $default;
+  font-family: "DM Sans", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container__small {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  color: #191919;
+  font-size: 36px;
+  text-align: center;
 }
