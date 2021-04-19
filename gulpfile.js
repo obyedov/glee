@@ -27,7 +27,7 @@ function browsersync() {
 
 function html() {
   return src([
-      'app/@index.html',
+      'app/html/@index.html',
       '!app/**/_*.html'
     ])
     .pipe(fileinclude())

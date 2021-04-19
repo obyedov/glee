@@ -1,0 +1,271 @@
+.products-week {
+  padding: 68px 0;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 270px;
+  height: 380px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+
+  &:hover .product-card__interaction {
+    opacity: 1;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      background-color: orange;
+    }
+  }
+
+  &__img {
+    width: 238px;
+    height: 212px;
+    object-fit: scale-down;
+    margin-top: 27px;
+  }
+
+  &__info {
+    margin-bottom: 21px;
+    line-height: 2.5;
+    text-align: center;
+  }
+
+  &__name {
+    max-width: 238px;
+    color: $title;
+    font-weight: 500;
+    font-size: 16px;
+    @include line-clamp (16, 1, 2);
+  }
+
+  &__price {
+    color: #a3bbc8;
+  }
+
+  &__interaction {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__link-info,
+  &__cart,
+  &__like {
+    &:focus {
+      outline: $outline;
+    }
+  }
+
+  &__link-info {
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #ffffff;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/icons/search-product.svg);
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: rgba(163, 187, 200, 0.2);
+    }
+
+    &:active {
+      background-color: orange;
+    }
+  }
+
+  &__cart {
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    padding: 0;
+    border: 0;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #a3bbc8;
+    cursor: pointer;
+
+    &::before {
+      width: 22px;
+      height: 20px;
+      background-image: url(../images/icons/card-product.svg);
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: rgba(163, 187, 200, 0.5);
+    }
+
+    &:active {
+      background-color: orange;
+    }
+  }
+
+  &__like {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: 0;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &::before {
+      width: 22px;
+      height: 18px;
+      background-image: url(../images/icons/like-product.svg);
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: rgba(163, 187, 200, 0.2);
+    }
+
+    &:active {
+      background-color: orange;
+    }
+  }
+}
+
+.product-special {
+  &__row {
+    display: flex;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 870px;
+    margin-right: 30px;
+    padding-bottom: 85px;
+    background-color: rgba(252, 215, 182, 0.4);
+  }
+
+  &__pic {
+    position: relative;
+    z-index: 1;
+    margin-right: 18px;
+    object-fit: scale-down;
+
+    &--margin {
+      margin-right: 62px;
+    }
+  }
+
+  &__description {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 50px 0;
+      background-color: #ffffff;
+    }
+  }
+
+  &__name {
+    max-width: 250px;
+    margin-bottom: 30px;
+    color: $title;
+    font-size: 26px;
+    line-height: 1.2;
+    @include line-clamp (26, 1.2, 2);
+  }
+
+  &__text {
+    max-width: 329px;
+    margin-bottom: 35px;
+    color: $title;
+    font-size: 16px;
+    line-height: 1.9;
+    @include font (Rubik, 400);
+    @include line-clamp (16, 1.9, 3);
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 24px 86px 25px 20px;
+    border-radius: 5px;
+    border: 1px solid $default;
+    max-width: 250px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    @include font (Rubik, 500);
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 27px;
+      width: 22px;
+      height: 9px;
+      background-image: url(../images/icons/slider-arrow-default.svg);
+    }
+
+    &:hover {
+      background-color: $ground;
+    }
+
+    &:active {
+      background-color: orange;
+    }
+
+    &:visited {
+      color: $default;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+}

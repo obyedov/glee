@@ -1,10 +1,21 @@
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: #ffffff;
-  color: $default;
-  font-family: "DM Sans", "Tahoma", sans-serif;
   font-size: 16px;
+  font-family: "DM Sans", "Tahoma", sans-serif;
   font-weight: 700;
   line-height: 1;
+  color: $default;
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 .sr-only {
@@ -21,20 +32,103 @@ body {
   white-space: nowrap !important;
 }
 
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
+.slick-initialized {
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.container__small {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &--large {
+    max-width: 1800px;
+  }
 }
 
+.btn-circle {
+  position: relative;
+  width: 51px;
+  height: 52px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 .title {
-  color: #191919;
   font-size: 36px;
   text-align: center;
+  color: #191919;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    color: #8b8b8b;
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(139, 139, 139, 0.5);
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      color: orange;
+    }
+  }
+}
+
+
+
+.footer-text-style {
+  font-size: 14px;
+  font-family: $rubik;
+  font-weight: 400;
+  line-height: 2.3;
+  color: #7b7b7b;
+
+  a {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $ground;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      color: orange;
+    }
+  }
 }

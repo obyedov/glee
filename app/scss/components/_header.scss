@@ -1,3 +1,7 @@
+.header {
+  flex: 0 0 auto;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -5,29 +9,17 @@
   padding: 37px 0 44px;
 }
 
-.header__logo {
-  margin-top: 3px;
-}
-
 .logo {
   display: flex;
   align-items: center;
 
   &__img {
-    margin-right: 13px;
+    object-fit: scale-down;
   }
 
-  &__text {
-    font-family: "Rubik", "Tahoma", sans-serif;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1.6;
+  &:focus {
+    outline: $outline;
   }
-}
-
-
-.menu-header {
-  padding-left: 150px;
 }
 
 .menu {
@@ -35,8 +27,10 @@
     display: flex;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 34px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
   }
 
   &__link {
@@ -48,48 +42,51 @@
     &:hover {
       color: $ground;
     }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      color: orange;
+    }
+
+    // &:visited {
+    //   color: $default;
+    // }
   }
 }
 
 .user-nav {
   display: flex;
-  margin-top: 11px;
 
   &__search {
-    position: relative;
-    width: 51px;
-    height: 52px;
     background-color: rgba(163, 187, 200, 0.2);
-    border-radius: 50%;
     margin-right: 21px;
-    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 
     &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 16px;
-      height: 16px;
       background-image: url(../images/icons/search.svg);
     }
 
     &:hover {
       background-color: rgba(163, 187, 200, 1);
     }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      background-color: orange;
+    }
   }
 
-  &__interactions {
+  &__links {
+    margin-right: 18px;
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 178px;
-    height: 51px;
-    background-color: $ground;
-    border-radius: 50px 50px 50px 50px;
-    margin-right: 18px;
 
     &::before {
       content: "";
@@ -100,16 +97,36 @@
       width: 1px;
       height: 32px;
       transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  &__heart,
+  &__cart {
+    position: relative;
+    width: 89px;
+    height: 51px;
+    background-repeat: no-repeat;
+    background-color: $ground;
+    background-position: center;
+    transition: background-color 0.3s ease;
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:hover {
+      background-color: rgba(252, 215, 182, 0.6);
+    }
+
+    &:active {
+      background-color: orange;
     }
   }
 
   &__heart {
-    position: relative;
-    margin-left: 41px;
-    margin-top: 8px;
-    width: 18px;
-    height: 17px;
     background-image: url(../images/icons/heart.svg);
+    border-radius: 50px 0 0 50px;
   }
 
   &__num {
@@ -118,8 +135,8 @@
     height: 16px;
     background-color: #ffffff;
     border-radius: 50%;
-    top: -8px;
-    right: -8px;
+    top: 8px;
+    right: 26px;
     text-align: center;
     color: $title;
     font-size: 10px;
@@ -128,28 +145,17 @@
   }
 
   &__cart {
-    position: relative;
-    margin-right: 42px;
-    margin-top: 8px;
-    width: 19px;
-    height: 17px;
     background-image: url(../images/icons/cart.svg);
+    border-radius: 0 50px 50px 0;
   }
 
   &__user {
-    position: relative;
-    width: 51px;
-    height: 52px;
     background-color: rgba(163, 187, 200, 1);
-    border-radius: 50%;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 
     &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
       width: 20px;
       height: 21px;
       background-image: url(../images/icons/user.svg);
@@ -157,6 +163,14 @@
 
     &:hover {
       background-color: rgba(163, 187, 200, 0.6);
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    &:active {
+      background-color: orange;
     }
   }
 }

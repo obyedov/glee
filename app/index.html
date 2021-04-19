@@ -12,16 +12,17 @@
 
 <body>
    <header class="header">
-   <div class="container">
-     <div class="header__inner">
+   <h1 class="sr-only">Glee online store</h1>
+   <div class="container container--large">
+     <nav class="header__inner">
        <a class="logo header__logo" href="#">
-         <img class="logo__img" src="images/icons/logo.svg" alt="Logo">
-         <span class="logo__text">Glee.</span>
+         <img class="logo__img" src="images/icons/logo.png" alt="Logo" width="146" height="39">
+         <span class="sr-only">Logo of the site</span>
        </a>
-       <nav class="menu menu-header">
+       <div class="menu">
          <ul class="menu__list">
            <li class="menu__item">
-             <a class="menu__link" href="#">Home +</a>
+             <a class="menu__link" href="#">Home <span>+</span></a>
            </li>
            <li class="menu__item">
              <a class="menu__link" href="#">About</a>
@@ -30,7 +31,7 @@
              <a class="menu__link" href="#">Services</a>
            </li>
            <li class="menu__item">
-             <a class="menu__link" href="#">Pages +</a>
+             <a class="menu__link" href="#">Pages <span>+</span></a>
            </li>
            <li class="menu__item">
              <a class="menu__link" href="#">News</a>
@@ -39,319 +40,568 @@
              <a class="menu__link" href="#">Contact</a>
            </li>
          </ul>
-       </nav>
+       </div>
        <div class="user-nav">
-         <a class="user-nav__link user-nav__search" href="#">
-            <span class="sr-only">Search</span>
-         </a>
-         <div class="user-nav__interactions">
-           <a class="user-nav__link user-nav__heart" href="#">
+         <button class="btn-circle user-nav__search" type="button">
+           <span class="sr-only">A button that opens a search field site</span>
+         </button>
+         <div class="user-nav__links">
+           <a class="user-nav__heart" href="#">
              <span class="user-nav__num">0</span>
-              <span class="sr-only">Likes</span>
+             <span class="sr-only">Number of products you liked</span>
            </a>
-           <a class="user-nav__link user-nav__cart" href="#">
+           <a class="user-nav__cart" href="#">
              <span class="user-nav__num">0</span>
-              <span class="sr-only">Number of products in the basket</span>
+             <span class="sr-only">Number of products in the basket</span>
            </a>
          </div>
-         <a class="user-nav__link user-nav__user" href="#">
-            <span class="sr-only">User menu</span>
-         </a>
+         <button class="btn-circle user-nav__user" type="button">
+           <span class="sr-only"> A button that opens an user menu</span>
+         </button>
        </div>
-     </div>
-
+     </nav>
    </div>
  </header>
 
   <main class="main">
         <section class="presentation">
-      <div class="container">
-        <ul class="slider-presentation">
-          <li class="slider-presentation__item" style="background-image: url(images/slider.jpg);">
-            <div class="slider-presentation__inner">
-              <h2 class="slider-presentation__title">Smart and trendy</h2>
-              <p class="slider-presentation__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt
-              </p>
-              <a class="slider-presentation__link" href="#">
+      <h2 class="sr-only">Presentation of store</h2>
+      <div class="container container--large">
+        <ul class="slider-product">
+          <li class="slider-product__item">
+            <div class="slider-product__inner">
+              <div class="slider-product__name">Smart and trendy</div>
+              <div class="slider-product__text">
+                <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt</p>
+              </div>
+              <a class="slider-product__link" href="#">
                 Shop Now
               </a>
             </div>
+            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+              alt="Slider picture">
           </li>
-          <li class="slider-presentation__item" style="background-image: url(images/slider.jpg);">
-            <div class="slider-presentation__inner">
-              <h2 class="slider-presentation__title">Smart and trendy</h2>
-              <p class="slider-presentation__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt
-              </p>
-              <a class="slider-presentation__link" href="#">
+          <li class="slider-product__item">
+            <div class="slider-product__inner">
+              <div class="slider-product__name">Smart and trendy</div>
+              <div class="slider-product__text">
+                <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt</p>
+              </div>
+              <a class="slider-product__link" href="#">
                 Shop Now
               </a>
             </div>
+            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+              alt="Slider picture">
           </li>
-          <li class="slider-presentation__item" style="background-image: url(images/slider.jpg);">
-            <div class="slider-presentation__inner">
-              <h2 class="slider-presentation__title">Smart and trendy</h2>
-              <p class="slider-presentation__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt
-              </p>
-              <a class="slider-presentation__link" href="#">
+          <li class="slider-product__item">
+            <div class="slider-product__inner">
+              <div class="slider-product__name">Smart and trendy</div>
+              <div class="slider-product__text">
+                <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                  incididunt</p>
+              </div>
+              <a class="slider-product__link" href="#">
                 Shop Now
               </a>
             </div>
+            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+              alt="Slider picture">
           </li>
         </ul>
         <div class="features">
-          <div class="features__inner">
-            <span></span>
             <ul class="features__items">
               <li class="features__item features__item--icon1">
-                <h2 class="features__title">Support 24/7.</h2>
-                <div class="features__text">
+                <h3 class="features__title">Support 24/7.</h3>
+                <div class="features__text features__text--text1">
                   <p>Contact us 24 hours a day,
                     7 days a week.</p>
                 </div>
               </li>
               <li class="features__item features__item--icon2">
-                <h2 class="features__title">Delivery.</h2>
+                <h3 class="features__title">Delivery.</h3>
                 <div class="features__text">
                   <p>Free shipping on all US order.</p>
                 </div>
               </li>
               <li class="features__item features__item--icon3">
-                <h2 class="features__title">100% Payment secure.</h2>
+                <h3 class="features__title">100% Payment secure.</h3>
                 <div class="features__text">
                   <p>We ensure secure payment
                     with PEV.</p>
                 </div>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </section>
-    <section class="products">
-  <div class="container__small">
-    <h2 class="title products__title">Products of the week</h2>
-    <ul class="products__list">
-      <li class="products__button">
-        <button class="products__btn" data-filter="all" type="button">All</button>
+    <section class="products-week">
+  <div class="container" data-ref="container-1">
+    <h2 class="title products-week__title">Products of the week</h2>
+    <ul class="filter">
+      <li class="filter__item">
+        <button class="filter__btn" data-filter="all" type="button">All</button>
       </li>
-      <li class="products__button">
-        <button class="products__btn" data-filter=".category-furnitures" type="button">Furnitures</button>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-furnitures" type="button">Furnitures</button>
       </li>
-      <li class="products__button">
-        <button class="products__btn" data-filter=".category-chairs" type="button">Chairs</button>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-chairs" type="button">Chairs</button>
       </li>
-      <li class="products__button">
-        <button class="products__btn" data-filter=".category-lighting" type="button">Lighting</button>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-lighting" type="button">Lighting</button>
       </li>
-      <li class="products__button">
-        <button class="products__btn" data-filter=".category-decor" type="button">Decor</button>
-      </li>
-    </ul>
-    <ul class="products__content">
-      <li class="products__item mix category-furnitures">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox
-            href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/wooden-radio.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Wooden radio</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-chairs">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/wooden-chair.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Wooden chair</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-lighting">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/white-chair.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">White chair</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-decor">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/retro-table.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Retro table</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-furnitures">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/wooden-radio2.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Wooden radio</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-chairs">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/wooden-chair2.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Wooden chair</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-lighting">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/white-chair2.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">White chair</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
-      </li>
-      <li class="products__item mix category-decor">
-        <a class="products__card" href="#">
-          <a class="products__view" data-fancybox href="https://dummyimage.com/600x400/abcabc/fcd7b6&text=Фото+мебели">
-            <img class="products__img" src="images/retro-table2.png" alt="the product image">
-          </a>
-          <div class="products__interaction">
-            <a class="products__link" href="#">
-              <span class="sr-only">View product details </span>
-            </a>
-            <button class="products__card--add" type="button">
-              <span class="sr-only">Add this product to the cart</span>
-            </button>
-            <button class="products__like" type="button">
-              <span class="sr-only">Add this product to favorites </span>
-            </button>
-          </div>
-          <div class="products__info">
-            <h3 class="products__name">Retro table</h3>
-            <p class="products__price"><span>$</span>29.00</p>
-          </div>
-        </a>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-decor" type="button">Decor</button>
       </li>
     </ul>
+    <ul class="products-week__content">
+      <li class="products-week__item mix category-furnitures">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/wooden-radio.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Wooden radio</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-chairs">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/wooden-chair.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Wooden chair</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-chairs">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/white-chair.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">White chair</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-furnitures">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/retro-table.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Retro table</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-furnitures">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/wooden-radio2.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Wooden radio</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-chairs">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/wooden-chair2.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Wooden chair</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-chairs">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/white-chair2.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">White chair</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+      <li class="products-week__item mix category-furnitures">
+        <article class="product-card">
+          <a class="product-card__link" href="#">
+            <img class="product-card__img" src="images/retro-table2.png" alt="the product image">
+            <div class="product-card__info">
+              <h3 class="product-card__name">Retro table</h3>
+              <p class="product-card__price"><span>$</span>29.00</p>
+            </div>
+          </a>
+          <div class="product-card__interaction">
+            <a class="product-card__link-info btn-circle" href="#">
+              <span class="sr-only">View product details </span>
+            </a>
+            <button class="product-card__cart btn-circle" type="button">
+              <span class="sr-only">Add this product to the cart</span>
+            </button>
+            <button class="product-card__like btn-circle" type="button">
+              <span class="sr-only">Add this product to favorites </span>
+            </button>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <div class="container container--large">
+    <div class="product-special">
+      <div class="product-special__row">
+        <div class="product-special__inner">
+          <img class="product-special__pic" src="images/ps1.png" width="233" height="405" alt="Special product image">
+          <div class="product-special__description">
+            <div class="product-special__name">
+              <p>Mirum Notare Tellus</p>
+            </div>
+            <div class="product-special__text">
+              <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
+            </div>
+            <a class="product-special__link" href="#">View More</a>
+          </div>
+        </div>
+        <div class="product-special__inner">
+          <img class="product-special__pic product-special__pic--margin" src="images/ps2.png" width="233" height="405"
+            alt="Special product image">
+          <div class="product-special__description">
+            <div class="product-special__name">
+              <p>Malesuada Tempor
+                Euismod</p>
+            </div>
+            <div class="product-special__text">
+              <p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
+            </div>
+            <a class="product-special__link" href="#">View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="design">
+  <div class="container" data-ref="container-2">
+    <h2 class="design__title title">
+      New design
+    </h2>
+    <ul class="filter">
+      <li class="filter__item">
+        <button class="filter__btn" data-filter="all" type="button">All</button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-furnitures2" type="button">Furnitures</button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-chairs2" type="button">Chairs</button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-lighting2" type="button">Lighting</button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn" data-filter=".category-decor2" type="button">Decor</button>
+      </li>
+    </ul>
+    <ul class="design__content">
+      <li class="design__item mix category-furnitures2">
+        <article class="design__card">
+          <a class="design__link" href="#">
+            <h3 class="design__subtitle">Beat Flat Pendant Black</h3>
+            <div class="design__name-pic">
+              <p class="design__name">Classic</p>
+              <img class="design__pic" src="images/design-pic-1.png" alt="Picture of design card">
+            </div>
+          </a>
+        </article>
+      </li>
+      <li class="design__item mix category-furnitures2">
+        <article class="design__card">
+          <a class="design__link" href="#">
+            <h3 class="design__subtitle">Lampe Sur Pieds
+              Bamboo</h3>
+            <div class="design__name-pic">
+              <p class="design__name">Classic</p>
+              <img class="design__pic" src="images/design-pic-2.png" alt="Picture of design card">
+            </div>
+          </a>
+        </article>
+      </li>
+      <li class="design__item mix category-chairs2">
+        <article class="design__card">
+          <a class="design__link design__link--column" href="#">
+            <div class="design__info">
+              <h3 class="design__subtitle design__subtitle--column">Rattan Rocking
+                Chair</h3>
+              <p class="design__name">Classic</p>
+            </div>
+            <img class="design__pic design__pic--column" src="images/design-pic-3.png" alt="Picture of design card">
+          </a>
+        </article>
+      </li>
+      <li class="design__item mix category-furnitures2">
+        <article class="design__card">
+          <a class="design__link" href="#">
+            <h3 class="design__subtitle">Rattan Rocking
+              Chair</h3>
+            <div class="design__name-pic">
+              <p class="design__name">Classic</p>
+              <img class="design__pic" src="images/design-pic-4.png" alt="Picture of design card">
+            </div>
+          </a>
+        </article>
+      </li>
+      <li class="design__item mix category-chairs2">
+        <article class="design__card">
+          <a class="design__link design__link--column" href="#">
+            <div class="design__info">
+              <h3 class="design__subtitle design__subtitle--column">Rattan Rocking Chair</h3>
+              <p class="design__name">Classic</p>
+            </div>
+            <img class="design__pic design__pic--column" src="images/design-pic-5.png" alt="Picture of design card">
+          </a>
+        </article>
+      </li>
+      <li class="design__item mix category-furnitures2">
+        <article class="design__card">
+          <a class="design__link" href="#">
+            <h3 class="design__subtitle">Lampe Sur Pieds
+              Bamboo</h3>
+            <div class="design__name-pic">
+              <p class="design__name">Classic</p>
+              <img class="design__pic" src="images/design-pic-6.png" alt="Picture of design card">
+            </div>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="videopreview " style="background-image: url(images/video-bg.jpg);">
+    <a data-fancybox class="videopreview__link btn-circle"
+      href="https://www.youtube.com/watch?v=4rZLRTZc2X0">
+      <span class="sr-only">Play icon that will open the video</span>
+    </a>
+</div>
+    <section class="insights-articles">
+  <div class="container">
+    <div class="insights-articles__row">
+      <h2 class="insights-articles__title title">
+        Our Insights & Articles
+      </h2>
+      <a class="insights-articles__link-more" href="#">View All</a>
+    </div>
+
+    <ul class="insights-articles__column">
+      <li class="insights-articles__item">
+        <article class="insights-articles__card">
+          <a class="insights-articles__link" href="#">
+            <img class="insights-articles__pic" src="images/insights-articles-1.jpg" alt="picture with news">
+            <h3 class="insights-articles__text">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </h3>
+            <div class="insights-articles__date-author">
+              <div class="insights-articles__date">
+                <p>28 january, 2020</p>
+              </div>
+              <div class="insights-articles__author">
+                <p>by admin</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      </li>
+      <li class="insights-articles__item">
+        <article class="insights-articles__card">
+          <a class="insights-articles__link" href="#">
+            <img class="insights-articles__pic" src="images/insights-articles-2.jpg" alt="picture with news">
+            <h3 class="insights-articles__text">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            </h3>
+            <div class="insights-articles__date-author">
+              <div class="insights-articles__date">
+                <p>28 january, 2020</p>
+              </div>
+              <div class="insights-articles__author">
+                <p>by admin</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      </li>
+      <li class="insights-articles__item">
+        <article class="insights-articles__card">
+          <a class="insights-articles__link" href="#">
+            <img class="insights-articles__pic" src="images/insights-articles-3.jpg" alt="picture with news">
+            <h3 class="insights-articles__text">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+            </h3>
+            <div class="insights-articles__date-author">
+              <div class="insights-articles__date">
+                <p>28 january, 2020</p>
+              </div>
+              <div class="insights-articles__author">
+                <p>by admin</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      </li>
+    </ul>
+
+    <ul class="slider-brand">
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-1.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-2.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-3.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-4.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-5.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-1.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-2.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-3.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-4.png" alt="Brand picture">
+      </li>
+      <li class="slider-brand__item">
+        <img class="slider-brand__pic" src="images/slider-brand-5.png" alt="Brand picture">
+      </li>
+    </ul>
+
   </div>
 </section>
   </main>
 
   <footer class="footer">
-  <div class="container__small">
+  <div class="container">
     <div class="footer__top">
       <ul class="footer__row">
         <li class="footer__column">
           <a class="logo footer__logo" href="#">
-            <img class="logo__img" src="images/icons/logo.svg" alt="Logo">
-            <span class="logo__text">Glee.</span>
+            <img class="logo__img" src="images/icons/logo.png" width="146" height="39" alt="Logo">
           </a>
-          <address class="contact">
-            <p class="contact__address"> <span>Address</span>: 4772 Wines Lane
-              Houston, TX 77032</p>
-            <a class="contact__tel" href="tel:+8323475843"><span>Telephone</span>: +832-347-5843</a>
-            <a class="contact__mail" href="mailto:contact@glee.com"> <span>Email</span>: contact@Glee.com</a>
+          <address class="contact footer-text-style">
+            <p class="contact__address">
+              <span>Address:</span>
+              4772 Wines Lane Houston, TX 77032
+            </p>
+            <p>
+              <span>Telephone:</span>
+              <a class="contact__tel" href="tel:+8323475843"> +832-347-5843
+              </a>
+            </p>
+            <p>
+              <span>Email:</span>
+              <a class="contact__mail" href="mailto:contact@glee.com">contact@Glee.com</a>
+            </p>
           </address>
         </li>
         <li class="footer__column">
           <h3 class="footer__column-title">Services</h3>
-          <ul class="footer__services">
+          <ul class="footer__services footer-text-style">
             <li class="footer__service">
               <a class="footer__service-link" href="#">About us</a>
             </li>
@@ -362,8 +612,8 @@
               <a class="footer__service-link" href="#">Our Blog</a>
             </li>
             <li class="footer__service">
-              <a class="footer__service-link" href="#">Contact</a>
-              Us</li>
+              <a class="footer__service-link" href="#">Contact Us</a>
+            </li>
             <li class="footer__service">
               <a class="footer__service-link" href="#">Terms & Condition</a>
             </li>
@@ -371,7 +621,7 @@
         </li>
         <li class="footer__column">
           <h3 class="footer__column-title">Account</h3>
-          <ul class="footer__account-items">
+          <ul class="footer__account-items footer-text-style">
             <li class="footer__account-item">
               <a class="footer__account-link" href="#">Your Account</a>
             </li>
@@ -388,12 +638,12 @@
         </li>
         <li class="footer__column">
           <h3 class="footer__column-title">Newsletter</h3>
-          <div class="footer__newsletter-text">
+          <div class="footer__newsletter-text footer-text-style">
             Subscribe by our newsletter and get
             update protidin.
           </div>
-          <form action="subscribe.php" class="newsletter">
-            <label class="label">
+          <form action="#" class="newsletter">
+            <label class="newsletter__label">
               <input class="newsletter__input" type="email" name="email" placeholder="Email address">
             </label>
             <button class="newsletter__btn" type="submit">Subscribe</button>
@@ -402,28 +652,19 @@
       </ul>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copyright">
+      <div class="footer__copyright footer-text-style">
         ©2020 CopyRight Example. All rights reserved.
       </div>
       <nav class="footer__menu">
-        <ul class="footer__menu-items">
+        <ul class="footer__menu-items footer-text-style">
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">Home</a>
-          </li>
-          <li class="footer__menu-item">
-            <span>|</span>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">About</a>
           </li>
           <li class="footer__menu-item">
-            <span>|</span>
-          </li>
-          <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">Blog</a>
-          </li>
-          <li class="footer__menu-item">
-            <span>|</span>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">Contact</a>

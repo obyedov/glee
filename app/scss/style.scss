@@ -1,20 +1,17 @@
 
+@import 'libs';
 @import 'vars';
+@import 'mixins';
 //<ADD FONTS>==================================================
-@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,500,700&family=Poppins:700&family=Rubik:regular,500&display=swap);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
 @import "fonts";
 //</ADD FONTS>==================================================
 @import 'reset';
 @import 'global';
-@import 'header';
+@import 'components/header';
 
-@import 'presentation';
-@import 'products';
+@import 'components/home-page/presentation';
+@import 'components/home-page/products';
+@import 'components/home-page/design';
+@import 'components/home-page/insights-articles';
 
-@import 'footer';
-
-
-
-@import 'media';
+@import 'components/footer';
