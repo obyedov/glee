@@ -58,23 +58,21 @@
       margin-right: 30px;
     }
   }
+}
 
-  &__card {
-    width: 370px;
-    height: 420px;
-    background-color: #ffffff;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    background-color: #ffffff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.news-card {
+  max-width: 370px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: $color-main;
-    }
+  &:hover {
+    background-color: $color-main;
+  }
 
-    &:active {
-      background-color: orange;
-    }
+  &:active {
+    background-color: orange;
   }
 
   &__link {
@@ -87,23 +85,6 @@
     &:focus {
       outline: $outline;
     }
-
-    &::before {
-      content: 'news';
-      position: absolute;
-      left: 28px;
-      top: 233px;
-      width: 103px;
-      padding: 5px 0;
-      text-transform: uppercase;
-      text-align: center;
-      color: #ffffff;
-      font-family: Poppins;
-      font-size: 14px;
-      line-height: 1.4;
-      border-radius: 30px;
-      background-color: #a3bbc8;
-    }
   }
 
   &__pic {
@@ -113,22 +94,39 @@
     object-fit: scale-down;
   }
 
+  &__category {
+    position: absolute;
+    left: 28px;
+    top: 233px;
+    width: 103px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 30px;
+    background-color: #a3bbc8;
+  }
+
   &__text {
     align-self: flex-end;
-    height: 56px;
+    min-height: 56px;
     max-width: 286px;
     margin-bottom: 18px;
     margin-right: 55px;
     color: #262626;
     font-size: 18px;
     font-weight: 500;
-    @include line-clamp (18, 1, 3);
+    @include line-clamp (18, 1, 6);
   }
 
-  &__date-author {
+  &__time {
     display: flex;
     width: 315px;
     padding-top: 10px;
+    padding-bottom: 19px;
     color: #222933;
     font-size: 12px;
     line-height: 30px;
@@ -137,10 +135,28 @@
     @include font (MyriadPro, 400)
   }
 
-  &__date {
-    margin-right: 30px;
+  &__date,
+  &__author {
+    &::before {
+      font-family: 'glee';
+      margin-right: 5px;
+      color: $btn-main-bg;
+    }
   }
 
+  &__date {
+    margin-right: 30px;
+
+    &::before {
+      content: "\e900";
+    }
+  }
+
+  &__author {
+    &::before {
+      content: "\e901";
+    }
+  }
 }
 
 .slider-brand {

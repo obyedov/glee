@@ -87,85 +87,36 @@
     transition: opacity 0.3s ease;
   }
 
-  &__link-info,
-  &__cart,
-  &__like {
-    &:focus {
-      outline: $outline;
-    }
-  }
+  // &__link-info,
+  // &__cart,
+  // &__like {
+  //   &:focus {
+  //     outline: $outline;
+  //   }
+  // }
 
   &__link-info {
-    width: 45px;
-    height: 45px;
     margin-right: 16px;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    background-color: #ffffff;
-
     &::before {
-      width: 20px;
-      height: 20px;
-      background-image: url(../images/icons/search-product.svg);
-      background-repeat: no-repeat;
-    }
-
-    &:hover {
-      background-color: rgba(163, 187, 200, 0.2);
-    }
-
-    &:active {
-      background-color: orange;
+      content: '\e902';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
   }
 
   &__cart {
-    width: 45px;
-    height: 45px;
     margin-right: 16px;
-    padding: 0;
-    border: 0;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    background-color: #a3bbc8;
-    cursor: pointer;
 
     &::before {
-      width: 22px;
-      height: 20px;
-      background-image: url(../images/icons/card-product.svg);
-      background-repeat: no-repeat;
-    }
-
-    &:hover {
-      background-color: rgba(163, 187, 200, 0.5);
-    }
-
-    &:active {
-      background-color: orange;
+      content: '\e903';
     }
   }
 
   &__like {
-    width: 45px;
-    height: 45px;
-    padding: 0;
-    border: 0;
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    background-color: #ffffff;
-    cursor: pointer;
-
     &::before {
-      width: 22px;
-      height: 18px;
-      background-image: url(../images/icons/like-product.svg);
-      background-repeat: no-repeat;
-    }
-
-    &:hover {
-      background-color: rgba(163, 187, 200, 0.2);
-    }
-
-    &:active {
-      background-color: orange;
+      content: '\e904';
     }
   }
 }

@@ -67,6 +67,43 @@ body {
   }
 }
 
+.hover-circle {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: "";
+    font-family: 'glee';
+    font-size: 20px;
+    color: $btn-main-bg;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $btn-main-bg;
+
+    &::before {
+      color: #ffffff;
+    }
+  }
+
+  &:active {
+    background-color: orange;
+  }
+
+  &:focus {
+    outline: $outline;
+  }
+
+}
+
 
 .title {
   font-size: 36px;
