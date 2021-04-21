@@ -40,7 +40,7 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: $ground;
+      color: $color-main;
     }
 
     &:focus {
@@ -52,7 +52,7 @@
     }
 
     // &:visited {
-    //   color: $default;
+    //   color: $menu-main-color;
     // }
   }
 }
@@ -107,7 +107,7 @@
     width: 89px;
     height: 51px;
     background-repeat: no-repeat;
-    background-color: $ground;
+    background-color: $color-main;
     background-position: center;
     transition: background-color 0.3s ease;
 
@@ -138,7 +138,7 @@
     top: 8px;
     right: 26px;
     text-align: center;
-    color: $title;
+    color: $color-secondary;
     font-size: 10px;
     font-weight: 400;
     line-height: 16px;

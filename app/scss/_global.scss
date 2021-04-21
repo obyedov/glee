@@ -11,7 +11,7 @@ body {
   font-family: "DM Sans", "Tahoma", sans-serif;
   font-weight: 700;
   line-height: 1;
-  color: $default;
+  color: $menu-main-color;
 }
 
 .main {
@@ -111,8 +111,7 @@ body {
 
 .footer-text-style {
   font-size: 14px;
-  font-family: $rubik;
-  font-weight: 400;
+  @include font (Rubik, 400);
   line-height: 2.3;
   color: #7b7b7b;
 
@@ -120,7 +119,7 @@ body {
     transition: color 0.3s ease;
 
     &:hover {
-      color: $ground;
+      color: $color-main;
     }
 
     &:focus {

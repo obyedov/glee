@@ -65,7 +65,7 @@
 
   &__name {
     max-width: 238px;
-    color: $title;
+    color: $color-secondary;
     font-weight: 500;
     font-size: 16px;
     @include line-clamp (16, 1, 2);
@@ -212,7 +212,7 @@
   &__name {
     max-width: 250px;
     margin-bottom: 30px;
-    color: $title;
+    color: $color-secondary;
     font-size: 26px;
     line-height: 1.2;
     @include line-clamp (26, 1.2, 2);
@@ -221,7 +221,7 @@
   &__text {
     max-width: 329px;
     margin-bottom: 35px;
-    color: $title;
+    color: $color-secondary;
     font-size: 16px;
     line-height: 1.9;
     @include font (Rubik, 400);
@@ -233,7 +233,7 @@
     display: inline-block;
     padding: 24px 86px 25px 20px;
     border-radius: 5px;
-    border: 1px solid $default;
+    border: 1px solid $menu-main-color;
     max-width: 250px;
     font-size: 15px;
     text-overflow: ellipsis;
@@ -253,7 +253,7 @@
     }
 
     &:hover {
-      background-color: $ground;
+      background-color: $color-main
     }
 
     &:active {
@@ -261,7 +261,7 @@
     }
 
     &:visited {
-      color: $default;
+      color: $menu-main-color;
     }
 
     &:focus {

@@ -60,12 +60,12 @@
       padding: 0 15px;
       font-size: 12px;
       font-weight: 400;
-      color: $input;
+      color: $input-email-color;
       background-color: rgba(252, 215, 182, 0.2);
       border: none;
 
       &::placeholder {
-        color: $input;
+        color: $input-email-color;
       }
 
       &:focus {

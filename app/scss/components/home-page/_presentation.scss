@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-color: $ground;
+    background-color: $color-main;
 
     &:before {
       content: "";
@@ -30,10 +30,9 @@
 
   &__name {
     margin-bottom: 23px;
-    color: $title;
-    font-family: $rubik;
+    color: $color-secondary;
+    @include font (Rubik, 500);
     font-size: 72px;
-    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
     @include line-clamp(72,
@@ -43,10 +42,9 @@
 
   &__text {
     margin-bottom: 62px;
-    color: $default;
-    font-family: $rubik;
+    color: $menu-main-color;
+    @include font (Rubik, 400);
     font-size: 18px;
-    font-weight: 400;
     line-height: 1.66;
     max-width: 390px;
     @include line-clamp(18,
@@ -58,9 +56,8 @@
     position: relative;
     padding: 23px 101px 23px 27px;
     color: #ffffff;
-    font-family: $rubik;
+    @include font (Rubik, 500);
     font-size: 15px;
-    font-weight: 500;
     line-height: 1;
     background-color: rgba(163, 187, 200, 1);
     transition: background-color 0.3s ease;
@@ -111,10 +108,9 @@
     height: 29px;
     padding: 0;
     opacity: 30%;
-    color: $title;
-    font-family: $rubik;
+    color: $color-secondary;
+    @include font (Rubik, 500);
     font-size: 11px;
-    font-weight: 500;
     line-height: 1;
     border: none;
     border-radius: 50%;
@@ -210,6 +206,7 @@
     @include line-clamp(16,
       1.9,
       2);
+
     &--text1 {
       max-width: 197px;
     }
