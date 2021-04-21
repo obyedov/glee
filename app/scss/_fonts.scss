@@ -1,7 +1,122 @@
+        // Google Fonts:
+
+        /* DMSans */
+
+        @font-face {
+          font-family: 'DMSans';
+          font-style: normal;
+          font-weight: 400;
+
+          font-display: swap;
+          src: url('../fonts/dm-sans-v6-latin-regular.woff2') format('woff2'),
+            url('../fonts/dm-sans-v6-latin-regular.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'DMSans';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url('../fonts/dm-sans-v6-latin-500.woff2') format('woff2'),
+            url('../fonts/dm-sans-v6-latin-500.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'DMSans';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url('../fonts/dm-sans-v6-latin-700.woff2') format('woff2'),
+            url('../fonts/dm-sans-v6-latin-700.woff') format('woff');
+        }
+
+        /* Nunito */
+
+        @font-face {
+          font-family: 'Nunito';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url('../fonts/nunito-v16-latin-700.woff2') format('woff2'),
+            url('../fonts/nunito-v16-latin-700.woff') format('woff');
+        }
+
+        /* Poppins */
+
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+            url('../fonts/poppins-v15-latin-regular.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-display: swap;
+          src: url('../fonts/poppins-v15-latin-600.woff2') format('woff2'),
+            url('../fonts/poppins-v15-latin-600.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url('../fonts/poppins-v15-latin-700.woff2') format('woff2'),
+            url('../fonts/poppins-v15-latin-700.woff') format('woff');
+        }
+
+        /* Rubik */
+
+        @font-face {
+          font-family: 'Rubik';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url('../fonts/rubik-v12-latin-300.woff2') format('woff2'),
+            url('../fonts/rubik-v12-latin-300.woff') format('woff');
+        }
+
+
+        @font-face {
+          font-family: 'Rubik';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url('../fonts/rubik-v12-latin-regular.woff2') format('woff2'),
+            url('../fonts/rubik-v12-latin-regular.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Rubik';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url('../fonts/rubik-v12-latin-500.woff2') format('woff2'),
+            url('../fonts/rubik-v12-latin-500.woff') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Rubik';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url('../fonts/rubik-v12-latin-700.woff2') format('woff2'),
+            url('../fonts/rubik-v12-latin-700.woff') format('woff');
+        }
+
+        // Other Fonts:
+
+        /* MyriadPro */
+
         @font-face {
           font-family: 'MyriadPro';
           font-style: normal;
           font-weight: normal;
-          src: url(../fonts/MYRIADPRO-REGULAR.woff);
           font-display: swap;
+          src: url('../fonts/MYRIADPRO-REGULAR.woff') format('woff');
         }
