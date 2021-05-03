@@ -7,14 +7,56 @@
   justify-content: space-between;
   align-items: center;
   padding: 37px 0 44px;
+
+  @include r($lg) {
+    padding: 30px 0;
+  }
+
+  @include r($md) {
+    padding: 20px 0;
+  }
+
+  @include r($sm) {
+    padding: 10px 0;
+  }
+}
+
+.menu-btn {
+  display: none;
+  transition: transform 0.3s ease;
+
+  @include r($lg) {
+    z-index: 3;
+    border: none;
+    padding: 0;
+    margin-right: 14px;
+    background-color: transparent;
+    @include hamburger ($color: $color-secondary,
+      $color-hover: $color-main,
+      $width: 20px,
+      $height: 20px,
+      $weight: 2px,
+      $bars: 3);
+  }
+
+  &.open-menu {
+    transform: rotate(90deg) translate(0, 0);
+  }
 }
 
 .logo {
+  z-index: 5;
   display: flex;
   align-items: center;
 
+
   &__img {
     object-fit: scale-down;
+
+    @include r($sm) {
+      width: 80px;
+      height: 30px;
+    }
   }
 
   &:focus {
@@ -23,13 +65,78 @@
 }
 
 .menu {
+
   &__list {
     display: flex;
+
+    @include r($lg) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      position: fixed;
+      z-index: 1;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 126px 30px 30px;
+      transition: left 0.3s ease;
+      // overflow: auto;
+    }
+
+    @include r($md) {
+      padding: 94px 30px 30px;
+    }
+
+    @include r($sm) {
+      padding: 65px 30px 30px;
+    }
+
+    &::before {
+      @include r($lg) {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 111px;
+        background-color: #ffffff;
+      }
+
+      @include r($md) {
+        height: 79px;
+      }
+
+      @include r($sm) {
+        height: 50px;
+      }
+    }
+
+    &.open-menu {
+      @include r($lg) {
+        left: 0;
+      }
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 34px;
+
+      @include r($xl) {
+        margin-right: 20px;
+      }
+
+      @include r($lg) {
+        // margin-bottom: 30px;
+        margin-right: 0;
+      }
+    }
+
+    @include r($lg) {
+      display: flex;
     }
   }
 
@@ -38,6 +145,12 @@
     font-size: 15px;
     font-weight: 500;
     transition: color 0.3s ease;
+
+    @include r($lg) {
+      font-size: 24px;
+      flex: 100%;
+      padding: 5px 0;
+    }
 
     &:hover {
       color: $color-main;
@@ -59,12 +172,40 @@
 
 .user-nav {
   display: flex;
+  z-index: 5;
+
+  @include r($md) {
+    align-items: center;
+  }
+
+  @include r($lg) {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
 
   &__search {
     background-color: rgba(163, 187, 200, 0.2);
     margin-right: 21px;
     border: none;
     cursor: pointer;
+
+    @include r($md) {
+      margin-right: 10px;
+    }
+
+    @include r($sm) {
+      display: none;
+    }
+
+    &.open-menu {
+      @include r($sm) {
+        display: block;
+        z-index: 5;
+        margin-right: 10px;
+        width: 32px;
+        height: 32px;
+      }
+    }
 
     &::before {
       background-image: url(../images/icons/search.svg);
@@ -88,15 +229,26 @@
     position: relative;
     display: flex;
 
+    &.open-menu {
+      @include r($sm) {
+        display: none;
+      }
+    }
+
+    @include r($md) {
+      margin-right: 10px;
+    }
+
+    @include r($sm) {
+      margin-right: 5px;
+    }
+
     &::before {
       content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include absolute-center;
       background-color: rgba(255, 255, 255, 0.4);
       width: 1px;
       height: 32px;
-      transform: translate(-50%, -50%);
       z-index: 1;
     }
   }
@@ -110,6 +262,16 @@
     background-color: $color-main;
     background-position: center;
     transition: background-color 0.3s ease;
+
+    @include r($md) {
+      width: 60px;
+      height: 39px;
+    }
+
+    @include r($sm) {
+      width: 50px;
+      height: 30px;
+    }
 
     &:focus {
       outline: $outline;
@@ -131,17 +293,31 @@
 
   &__num {
     position: absolute;
+    top: 8px;
+    right: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 16px;
     height: 16px;
     background-color: #ffffff;
     border-radius: 50%;
-    top: 8px;
-    right: 26px;
     text-align: center;
     color: $color-secondary;
     font-size: 10px;
     font-weight: 400;
-    line-height: 16px;
+
+    @include r($md) {
+      top: 5px;
+      right: 12px;
+    }
+
+    @include r($sm) {
+      top: 3px;
+      right: 9px;
+      width: 14px;
+      height: 14px;
+    }
   }
 
   &__cart {
@@ -154,6 +330,19 @@
     transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
+
+    &.open-menu {
+      @include r($sm) {
+        display: block;
+        z-index: 5;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @include r($sm) {
+      display: none;
+    }
 
     &::before {
       width: 20px;

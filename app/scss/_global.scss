@@ -12,6 +12,9 @@ body {
   font-weight: 700;
   line-height: 1;
   color: $menu-main-color;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .main {
@@ -36,6 +39,10 @@ body {
   .slick-slide {
     display: flex;
     justify-content: center;
+
+    @include r(1500) {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -46,24 +53,29 @@ body {
 
   &--large {
     max-width: 1800px;
+    // @include r($xl) {
+    //   max-width: 1200px;
+    // }
   }
 }
 
 .btn-circle {
   position: relative;
   width: 51px;
-  height: 52px;
+  height: 51px;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 
+  @include r($md) {
+    width: 39px;
+    height: 39px;
+  }
+
   &::before {
     content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    @include absolute-center;
     width: 16px;
     height: 16px;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -104,11 +116,22 @@ body {
 
 }
 
-
 .title {
   font-size: 36px;
   text-align: center;
   color: #191919;
+
+  @include r($lg) {
+    font-size: 30px;
+  }
+
+  @include r($md) {
+    font-size: 21px;
+  }
+
+  @include r($sm) {
+    font-size: 15px;
+  }
 }
 
 .filter {
@@ -116,9 +139,31 @@ body {
   justify-content: center;
   margin-bottom: 80px;
 
+  @include r($lg) {
+    margin-bottom: 30px;
+  }
+
+  @include r($md) {
+    margin-bottom: 20px;
+  }
+
+  @include r($sm) {
+    margin-bottom: 10px;
+  }
+
+
+
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include r($md) {
+        margin-right: 20px;
+      }
+
+      @include r($sm) {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -129,6 +174,11 @@ body {
     border: none;
     transition: color 0.3s ease;
     cursor: pointer;
+
+    @include r($sm) {
+      font-size: 14px;
+      font-weight: 500;
+    }
 
     &:hover {
       color: rgba(139, 139, 139, 0.5);
@@ -144,27 +194,37 @@ body {
   }
 }
 
+.button {
+  position: relative;
+  padding: 23px 101px 23px 27px;
+  @include font (Rubik, 500);
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
-
-.footer-text-style {
-  font-size: 14px;
-  @include font (Rubik, 400);
-  line-height: 2.3;
-  color: #7b7b7b;
-
-  a {
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $color-main;
-    }
-
-    &:focus {
-      outline: $outline;
-    }
-
-    &:active {
-      color: orange;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 20px;
+    width: 22px;
+    height: 9px;
   }
+
+  &:hover {
+    background-color: rgba(163, 187, 200, 0.6);
+  }
+
+  &:focus {
+    outline: $outline;
+  }
+
+  &:active {
+    background-color: orange;
+  }
+
 }

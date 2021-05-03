@@ -1,11 +1,11 @@
 
-@import 'libs';
+@import 'reset';
 @import 'vars';
+@import 'libs';
 @import 'mixins';
 //<ADD FONTS>==================================================
 @import "fonts";
 //</ADD FONTS>==================================================
-@import 'reset';
 @import 'global';
 @import 'components/header';
 

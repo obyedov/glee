@@ -9,9 +9,19 @@ $(function () {
       arrows: false,
       infinite: true,
       slidesToShow: 5,
-      slidesToScroll: 5
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 500
     });
 
+    $('.menu-btn').click(function () {
+      $('.menu-btn, .user-nav__user, .user-nav__links, .user-nav__search, .menu__list').toggleClass('open-menu');
+      // $('.menu__list').toggleClass('open-menu');
+       $('body').toggleClass('lock');
+      //  $('.user-nav__search').toggleClass('open-menu');
+      //  $('.user-nav__links').toggleClass('open-menu');
+      //  $('.user-nav__user').toggleClass('open-menu');
+    });
   // var mixer = mixitup('.products-week__content');
 
     //     var mixer = mixitup('.products-week__content', {

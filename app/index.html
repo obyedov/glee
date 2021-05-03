@@ -17,6 +17,9 @@
    <h1 class="sr-only">Glee online store</h1>
    <div class="container container--large">
      <nav class="header__inner">
+       <button class="menu-btn" type="button">
+         <span class="sr-only">Menu button</span>
+       </button>
        <a class="logo header__logo" href="#">
          <img class="logo__img" src="images/icons/logo.png" alt="Logo" width="146" height="39">
          <span class="sr-only">Logo of the site</span>
@@ -77,12 +80,14 @@
                 <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                   incididunt</p>
               </div>
-              <a class="slider-product__link" href="#">
+              <a class="slider-product__link button" href="#">
                 Shop Now
               </a>
             </div>
-            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
-              alt="Slider picture">
+            <div class="slider-product__image">
+              <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+                alt="Slider picture">
+            </div>
           </li>
           <li class="slider-product__item">
             <div class="slider-product__inner">
@@ -91,12 +96,14 @@
                 <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                   incididunt</p>
               </div>
-              <a class="slider-product__link" href="#">
+              <a class="slider-product__link button" href="#">
                 Shop Now
               </a>
             </div>
-            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
-              alt="Slider picture">
+            <div class="slider-product__image">
+              <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+                alt="Slider picture">
+            </div>
           </li>
           <li class="slider-product__item">
             <div class="slider-product__inner">
@@ -105,41 +112,52 @@
                 <p> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                   incididunt</p>
               </div>
-              <a class="slider-product__link" href="#">
+              <a class="slider-product__link button" href="#">
                 Shop Now
               </a>
             </div>
-            <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
-              alt="Slider picture">
+            <div class="slider-product__image">
+              <img class="slider-product__pic" src="images/slider-pic.png" width="640" height="264"
+                alt="Slider picture">
+            </div>
           </li>
         </ul>
         <div class="features">
-            <ul class="features__items">
-              <li class="features__item features__item--icon1">
+          <ul class="features__items">
+            <li class="features__item ">
+              <div class="features__row features__row--icon1">
                 <h3 class="features__title">Support 24/7.</h3>
                 <div class="features__text features__text--text1">
                   <p>Contact us 24 hours a day,
                     7 days a week.</p>
                 </div>
-              </li>
-              <li class="features__item features__item--icon2">
+              </div>
+
+            </li>
+            <li class="features__item ">
+              <div class="features__row features__row--icon2">
                 <h3 class="features__title">Delivery.</h3>
                 <div class="features__text">
                   <p>Free shipping on all US order.</p>
                 </div>
-              </li>
-              <li class="features__item features__item--icon3">
+              </div>
+
+            </li>
+            <li class="features__item ">
+              <div class="features__row features__row--icon3">
                 <h3 class="features__title">100% Payment secure.</h3>
                 <div class="features__text">
                   <p>We ensure secure payment
                     with PEV.</p>
                 </div>
-              </li>
-            </ul>
+              </div>
+
+            </li>
+          </ul>
         </div>
       </div>
     </section>
-    <section class="products-week">
+     <section class="products-week">
   <div class="container" data-ref="container-1">
     <h2 class="title products-week__title">Products of the week</h2>
     <ul class="filter">
@@ -163,7 +181,9 @@
       <li class="products-week__item mix category-furnitures">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/wooden-radio.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/wooden-radio.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Wooden radio</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -185,7 +205,9 @@
       <li class="products-week__item mix category-chairs">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/wooden-chair.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/wooden-chair.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Wooden chair</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -207,7 +229,9 @@
       <li class="products-week__item mix category-chairs">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/white-chair.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/white-chair.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">White chair</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -229,7 +253,9 @@
       <li class="products-week__item mix category-furnitures">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/retro-table.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/retro-table.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Retro table</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -251,7 +277,9 @@
       <li class="products-week__item mix category-furnitures">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/wooden-radio2.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/wooden-radio2.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Wooden radio</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -273,7 +301,9 @@
       <li class="products-week__item mix category-chairs">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/wooden-chair2.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/wooden-chair2.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Wooden chair</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -295,7 +325,9 @@
       <li class="products-week__item mix category-chairs">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/white-chair2.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/white-chair2.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">White chair</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -317,7 +349,9 @@
       <li class="products-week__item mix category-furnitures">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <img class="product-card__img" src="images/retro-table2.png" alt="the product image">
+            <div class="product-card__pic">
+              <img class="product-card__img" src="images/retro-table2.png" alt="the product image">
+            </div>
             <div class="product-card__info">
               <h3 class="product-card__name">Retro table</h3>
               <p class="product-card__price"><span>$</span>29.00</p>
@@ -350,7 +384,7 @@
             <div class="product-special__text">
               <p>LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
             </div>
-            <a class="product-special__link" href="#">View More</a>
+            <a class="product-special__link button" href="#">View More</a>
           </div>
         </div>
         <div class="product-special__inner">
@@ -364,7 +398,7 @@
             <div class="product-special__text">
               <p>50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
             </div>
-            <a class="product-special__link" href="#">View More</a>
+            <a class="product-special__link button" href="#">View More</a>
           </div>
         </div>
       </div>
@@ -395,71 +429,71 @@
     </ul>
     <ul class="design__content">
       <li class="design__item mix category-furnitures2">
-        <article class="design__card">
-          <a class="design__link" href="#">
-            <h3 class="design__subtitle">Beat Flat Pendant Black</h3>
-            <div class="design__name-pic">
-              <p class="design__name">Classic</p>
-              <img class="design__pic" src="images/design-pic-1.png" alt="Picture of design card">
+        <article class="design-card design-card--row">
+          <a class="design-card__link" href="#">
+            <h3 class="design-card__subtitle">Beat Flat Pendant Black</h3>
+            <div class="design-card__row">
+              <p class="design-card__name">Classic</p>
+              <img class="design-card__pic" src="images/design-pic-1.png" alt="Picture of design card">
             </div>
           </a>
         </article>
       </li>
       <li class="design__item mix category-furnitures2">
-        <article class="design__card">
-          <a class="design__link" href="#">
-            <h3 class="design__subtitle">Lampe Sur Pieds
+        <article class="design-card design-card--row">
+          <a class="design-card__link" href="#">
+            <h3 class="design-card__subtitle">Lampe Sur Pieds
               Bamboo</h3>
-            <div class="design__name-pic">
-              <p class="design__name">Classic</p>
-              <img class="design__pic" src="images/design-pic-2.png" alt="Picture of design card">
+            <div class="design-card__row">
+              <p class="design-card__name">Classic</p>
+              <img class="design-card__pic" src="images/design-pic-2.png" alt="Picture of design card">
             </div>
           </a>
         </article>
       </li>
       <li class="design__item mix category-chairs2">
-        <article class="design__card">
-          <a class="design__link design__link--column" href="#">
-            <div class="design__info">
-              <h3 class="design__subtitle design__subtitle--column">Rattan Rocking
+        <article class="design-card">
+          <a class="design-card__link design-card__link--column" href="#">
+            <div class="design-card__info">
+              <h3 class="design-card__subtitle design-card__subtitle--column">Rattan Rocking
                 Chair</h3>
-              <p class="design__name">Classic</p>
+              <p class="design-card__name">Classic</p>
             </div>
-            <img class="design__pic design__pic--column" src="images/design-pic-3.png" alt="Picture of design card">
+            <img class="design-card__pic design-card__pic--column" src="images/design-pic-3.png" alt="Picture of design card">
           </a>
         </article>
       </li>
       <li class="design__item mix category-furnitures2">
-        <article class="design__card">
-          <a class="design__link" href="#">
-            <h3 class="design__subtitle">Rattan Rocking
+        <article class="design-card design-card--row">
+          <a class="design-card__link" href="#">
+            <h3 class="design-card__subtitle">Rattan Rocking
               Chair</h3>
-            <div class="design__name-pic">
-              <p class="design__name">Classic</p>
-              <img class="design__pic" src="images/design-pic-4.png" alt="Picture of design card">
+            <div class="design-card__row">
+              <p class="design-card__name">Classic</p>
+              <img class="design-card__pic" src="images/design-pic-4.png" alt="Picture of design card">
             </div>
           </a>
         </article>
       </li>
       <li class="design__item mix category-chairs2">
-        <article class="design__card">
-          <a class="design__link design__link--column" href="#">
-            <div class="design__info">
-              <h3 class="design__subtitle design__subtitle--column">Rattan Rocking Chair</h3>
-              <p class="design__name">Classic</p>
+        <article class="design-card">
+          <a class="design-card__link design-card__link--column" href="#">
+            <div class="design-card__info">
+              <h3 class="design-card__subtitle design-card__subtitle--column">Rattan Rocking Chair</h3>
+              <p class="design-card__name">Classic</p>
             </div>
-            <img class="design__pic design__pic--column" src="images/design-pic-5.png" alt="Picture of design card">
+            <img class="design-card__pic design-card__pic--column" src="images/design-pic-5.png" alt="Picture of design card">
           </a>
         </article>
       </li>
       <li class="design__item mix category-furnitures2">
-        <article class="design__card">
-          <a class="design__link" href="#">
-            <h3 class="design__subtitle">Lampe Sur Pieds
+        <article class="design-card design-card--row">
+          <a class="design-card__link" href="#">
+            <h3 class="design-card__subtitle">Lampe Sur Pieds
               Bamboo</h3>
-            <div class="design__name-pic">
-              <p class="design__name">Classic</p>
-              <img class="design__pic" src="images/design-pic-6.png" alt="Picture of design card">
+            <div class="design-card__row">
+              <p class="design-card__name">Classic</p>
+              <img class="design-card__pic" src="images/design-pic-6.png" alt="Picture of design card">
             </div>
           </a>
         </article>
@@ -468,19 +502,27 @@
   </div>
 </section>
 
-<div class="videopreview " style="background-image: url(images/video-bg.jpg);">
+<div class="videopreview" style="background-image: url(images/video-bg.jpg);">
     <a data-fancybox class="videopreview__link btn-circle"
       href="https://www.youtube.com/watch?v=4rZLRTZc2X0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25">
+        <g>
+          <g>
+            <path class="videopreview__icon" fill="#fff"
+              d="M20.684 14.74L4.64 24.536c-.5.306-1.08.46-1.663.46-.48 0-.96-.105-1.399-.316C.606 24.21 0 23.293 0 22.295V2.7C0 1.701.606.783 1.58.314a3.242 3.242 0 0 1 3.06.143l16.045 9.798c.822.502 1.315 1.343 1.315 2.241 0 .9-.493 1.741-1.315 2.244z" />
+          </g>
+        </g>
+      </svg>
       <span class="sr-only">Play icon that will open the video</span>
     </a>
 </div>
-    <section class="insights-articles">
+   <section class="insights-articles">
   <div class="container">
     <div class="insights-articles__row">
       <h2 class="insights-articles__title title">
         Our Insights & Articles
       </h2>
-      <a class="insights-articles__link-more" href="#">View All</a>
+      <a class="insights-articles__link" href="#">View All</a>
     </div>
 
     <ul class="insights-articles__column">
@@ -582,25 +624,28 @@
           <a class="logo footer__logo" href="#">
             <img class="logo__img" src="images/icons/logo.png" width="146" height="39" alt="Logo">
           </a>
-          <address class="contact footer-text-style">
+          <address class="contact">
             <p class="contact__address">
               <span>Address:</span>
               4772 Wines Lane Houston, TX 77032
             </p>
             <p>
               <span>Telephone:</span>
-              <a class="contact__tel" href="tel:+8323475843"> +832-347-5843
+              <a class="contact__tel" href="tel:+8323475843">
+                +832-347-5843
               </a>
             </p>
             <p>
               <span>Email:</span>
-              <a class="contact__mail" href="mailto:contact@glee.com">contact@Glee.com</a>
+              <a class="contact__mail" href="mailto:contact@glee.com">
+                contact@Glee.com
+              </a>
             </p>
           </address>
         </li>
-        <li class="footer__column">
-          <h3 class="footer__column-title">Services</h3>
-          <ul class="footer__services footer-text-style">
+        <li class="footer__column footer__column--order">
+          <p class="footer__column-title">Services</p>
+          <ul class="footer__services">
             <li class="footer__service">
               <a class="footer__service-link" href="#">About us</a>
             </li>
@@ -618,9 +663,9 @@
             </li>
           </ul>
         </li>
-        <li class="footer__column">
-          <h3 class="footer__column-title">Account</h3>
-          <ul class="footer__account-items footer-text-style">
+        <li class="footer__column footer__column--order">
+          <p class="footer__column-title">Account</p>
+          <ul class="footer__account-items">
             <li class="footer__account-item">
               <a class="footer__account-link" href="#">Your Account</a>
             </li>
@@ -636,8 +681,8 @@
           </ul>
         </li>
         <li class="footer__column">
-          <h3 class="footer__column-title">Newsletter</h3>
-          <div class="footer__newsletter-text footer-text-style">
+          <p class="footer__column-title">Newsletter</p>
+          <div class="footer__newsletter">
             Subscribe by our newsletter and get
             update protidin.
           </div>
@@ -651,11 +696,11 @@
       </ul>
     </div>
     <div class="footer__bottom">
-      <div class="footer__copyright footer-text-style">
+      <div class="footer__copyright">
         ©2020 CopyRight Example. All rights reserved.
       </div>
       <nav class="footer__menu">
-        <ul class="footer__menu-items footer-text-style">
+        <ul class="footer__menu-items">
           <li class="footer__menu-item">
             <a class="footer__menu-link" href="#">Home</a>
           </li>
